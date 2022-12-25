@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<head>
+    <title>CANO BABA ZSTEALER TOKEN CHECKER</title>
+</head>
+
+<body>
+
+
+    <style>
+        body {
+            background-image: url('https://media.discordapp.net/attachments/1048683046871760907/1050089299086954519/zcheck_2.PNG?width=1034&height=586');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <center>
+            <h1>
+                <font color="red">ZSTEALER TOKEN CHECKER AMK</font>
+            </h1>
+            <div id="title">
+                <font color="white"></div>
+            <input id="token" type="text" name="token">
+            <button type="submit" name="submit" onclick="submit()">CHECKLE ANANNU SIKIM</button>
+            <div id="response"></div>
+           
+    </div>  
+    <script>
+        function submit() {
+            var input = document.getElementById("token").value;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://discordapp.com/api/v9/users/@me/guilds', true);
+            xhr.setRequestHeader('Authorization', `${input}`)
+            xhr.onload = function() {
+                if (xhr.response == '{"message": "401: Unauthorized", "code": 0}') {
+                    document.getElementById("response").innerHTML = "<br />Bok gibi token calismiyo"
+                } else {
+                    document.getElementById("response").innerHTML = "<br />calisiyo bu gir sik anasini"
+                }
+            }
+            xhr.send();
+
+        }
+    </script>

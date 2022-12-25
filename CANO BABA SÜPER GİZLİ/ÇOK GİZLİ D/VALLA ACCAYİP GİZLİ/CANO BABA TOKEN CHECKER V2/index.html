@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANO BABA TOKEN CHECKER</title>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header>
+        <ul>
+			<li><a target="_blank" href="https://discord.gg/zcheck">discord.gg/zcheck</a></li>
+        </ul>
+    </header>
+
+    <section id="tokens_list" class="input_tokens">
+        <div class="center">
+            <textarea name="tokens" id="tokens" cols="30" rows="10" placeholder="Tokenlerinizi Girin ..."></textarea>
+            <button onclick="CheckTokens()">CHECKLE</button>
+        </div>
+    </section>
+
+    <section id="results" class="hide">
+        <div class="result-box locked">
+            <div class="box-title">
+                <span>kilitli Hesab</span>
+                <hr>
+            </div>
+            <div id="locked_tokens">
+                
+            </div>
+        </div>
+        <div class="result-box working">
+            <div class="box-title">
+                <span>Giren Hesab</span>
+                <hr>
+            </div>
+            <div id="valid_tokens">
+
+            </div>
+        </div>
+        <div class="result-box bads">
+            <div class="box-title">
+                <span>Calismiy</span>
+                <hr>
+            </div>
+            <div id="invalid_tokens">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <script src="assets/app.js"></script>    
+</body>
+</html>
